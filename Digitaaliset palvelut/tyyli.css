@@ -1,0 +1,116 @@
+
+body {
+    color: rgb(255, 0, 0);
+    background-color: blue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2, h3, h4, h5 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+div a {
+    color: red;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.laatikko {
+    display: block;
+}
+
+
+
+div p {
+    background-color: aqua;
+    padding: 30px;
+    border: solid 10px red;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.esittely {
+    display: flex;
+    flex-direction: column;     /* Tekstit -> Kuva allekkain */
+    gap: 20px;
+}
+
+.esittely img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+nav {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.linkit,
+.linkit h2,
+.linkit p {
+    text-align: center;         /* SAMA TASO kuin Linkkejä-otsikko */
+}
+
+.linkit a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------
+   LEVEÄ NÄYTTÖ: ESITTELY VASEMMALLE — LINKIT VIEREEN
+--------------------------------------------------------- */
+
+@media (min-width: 800px) {
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .esittely {
+        flex: 2;
+        max-width: 600px;
+        text-align: left;      /* Tekstit lukijaystävällisemmin vasemmalle */
+    }
+
+    nav.linkit {
+        flex: 1;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;    /* Keskitetty myös sivupalkissa */
+    }
+}
